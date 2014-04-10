@@ -1,0 +1,109 @@
+#body{
+  background-image: url("/DB/images/background.jpg");
+}
+
+
+#nav{
+	background-color: #145E6B;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	opacity: 0.8;
+
+}
+
+#login-form {
+  float:right;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  display: inline-flex;
+
+}
+
+#login
+{
+		display: inline-flex;
+}
+
+#logemail, #logpass, #box
+{
+	padding-right: 5px;
+}
+
+
+
+.checkbox{
+	font-size: 15px;
+	}
+
+#heading
+{
+	padding-top: 15px;
+	padding-bottom: 20px;
+	color: #E4480F;
+	font-weight: bold;
+	text-align: center;
+}
+
+#signup 
+{
+
+ 	float: center;
+  text-align: center;
+  padding-left: 10px;
+  margin-right: 60px;
+  
+
+}
+
+#signup-form
+{
+	margin-left: 32em;
+	background-color: #C5C3C2;
+	padding: 15px 15px 15px 15px;
+	border-radius: 10px;
+	height: 370px;
+	width: 390px;
+}
+
+
+#dob
+{
+	padding-left: 5px;
+	display: inline;
+}
+
+#signupbtn
+{
+	margin-top: 19px;
+}
+
+#name{
+	display: inline-block;
+	float: left;
+
+}
+
+
+#slideshow
+{
+	float:left;
+	padding-top: 50px;
+	margin-left: 20px;
+	padding-left: 20px;
+}
+
+img
+{
+	width: 600px;
+	height: 450px;
+
+}
+
+#footer
+{
+	color: white;
+	margin-top: 59px;
+}

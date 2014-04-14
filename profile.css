@@ -1,0 +1,28 @@
+
+
+#banner
+{
+	/*float: right;*/
+	background-image: url("/DB/images/banner.jpg");
+	background-repeat: no-repeat;
+	color: white;
+}
+
+#profpic
+{
+	width: 200px;
+	padding-left: 2em;
+	padding-top: 2em;
+}
+
+
+#link
+{
+	visibility: hidden;
+}
+
+#tabs
+{
+	margin-top: -2em;
+	position: relative;
+}

@@ -95,11 +95,11 @@
 				  </div>
 			  </div>
 
-			<div id="birthdayHead">
+<!-- 				<div id="birthdayHead">
 				<h3>Birthday</h3>
 			
 
-					<!-- Split button -->
+				Split button 
 					<div id="dob">
 						<div class="btn-group">
 						  <button type="button" class="btn btn-default">Day</button>
@@ -144,9 +144,9 @@
 					    <li>Something else here</li>
 					    <li>Separated link</li>
 					  </ul>
-					</div>
+					</div> 
 
-				</div>
+				</div>-->
 
 			<div id="signupbtn" >
 			<input type='text' name ='a' hidden='true' value='register'><br /><!-- Ensures that the register control sequence is run-->

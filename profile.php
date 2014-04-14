@@ -1,12 +1,14 @@
 <!DOCTYPE html >
 <html >
   <head>
+    <?php session_start() ?>
     <title>MyBook || <?php echo $_SESSION['Name'] ;?></title>
     <meta http-equiv="Content-type" content="text/html;charset=ISO-8859-1" />
      <script src='behaviour.js' type='text/javascript'></script>
-     <script src='//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js' type='text/javascript'></script>
 
+     <!-- Imported local files -->
     <link rel="stylesheet" type="text/css" href="homepage.css" />
+    <link rel="stylesheet" type="text/css" href="profile.css" />
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="/DB/bootstrap-3.1.1-dist/css/bootstrap.css">
@@ -14,7 +16,7 @@
 
   </head>
  
-  <body id='body'>
+  <body>
 
     <nav class="navbar navbar-default navbar-static-top" role="navigation" id="nav">
       <div class="container-fluid">
@@ -30,7 +32,7 @@
         </div>
 
     
-      <form class="navbar-form navbar-left" role="search" >
+      <form class="navbar-form navbar-left" role="search"  id="searchs">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
@@ -42,60 +44,48 @@
       <ul class="nav navbar-nav navbar-right" id="headLinks">
         <li><a href="profile.php">Profile</a></li>
         <li><a href="homepage.php">Home</a></li>
-        <li><a href="friends.php">Friends</a></li>
-        <li><a href="action.php?a=logout">Logout</a></li>
-
+        <li><a href="#">Friends</a></li>
+        <li><a href="#">Logout</a></li>
         
       </ul>
-       </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
+     </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
 
-     </nav>
-     <div id = "container">
+    </nav>
 
-        <div class="row">
-          <div class="col-md-4">
-            <div id ="uinfo">
-              <img src="/DB/images/tablet.jpg">
-            </div>
+    <div id="container">
+      <div id="banner">
+       <!--  <img src="/DB/images/banner.jpg" > -->
 
-            <div id="taskbar">
-              <li>
-                <h4><span class="glyphicon glyphicon-list-alt col-md-2"></span>News Feed</h4>
-              </li>
-
-              <li>
-                <h4><span class="glyphicon glyphicon-th-large col-md-2"></span>Groups</h4>
-              </li>
-
-              <li>
-                <h4><span class="glyphicon glyphicon-user col-md-2"></span>Friends</h4>
-
-              </li>
-            </div>
-          
-          </div>
-
-
-          <div class="col-md-8">
-            hi
-            <textarea class="form-control" rows="3"></textarea>
-          </div>
-
+        <div id="profpic">
+          <img src="/DB/images/default.jpg">
+          <ul id="link">
+            <li><span class"glyphicon glyphicon-camera"></span></li>
+            <li>Change profile picture</li>
+          </ul>
         </div>
 
+        <div id="tabs">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="profile.php">Timeline</a></li>
+          <li><a href="#">Friends</a></li>
+          <li><a href="#">Messages</a></li>
+        </ul>
+      </div>
 
-       <div id = "pinfo">
+      </div>
 
-    <table width="400" border="10" align="center" cellpadding="10" cellspacing="1" bgcolor="#A52A2A">
-    </table>
+      
 
-       </div>
-     </div>
+      
 
+    </div>
+
+    
 
     <div id="footer">
       Copyright © Cary Nicole Shantel Jodi
     </div>
+
   </body>
 </html>

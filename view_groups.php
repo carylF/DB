@@ -78,20 +78,10 @@
 
           <div class="col-md-8">
 
-            <div>
-              <h2>Create a group</h2>
-              <p>
-               <a href="create_groups.php"> <button type="submit" class="btn btn-primary btn-lg" > Create a Group</button></a>
-              </p>
-            </div>
-
-            <div>
-              <h2>View groups</h2>
-              <p>
-               <a href="view_groups.php"> <button name = 'a' value='grpview'type="submit" class="btn btn-primary btn-lg" > View Groups</button></a>
-              </p>
-            </div>
-
+			<div id="heading">
+				<h1>Your Groups</h1>
+			</div>
+		
           </div>
 
         </div>

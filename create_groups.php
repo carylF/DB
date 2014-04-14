@@ -92,13 +92,13 @@
 					<p>Must be no more than 50 characters long.</p>
 					<div class="col-sm-12" id="text_area">
 						
-						<textarea rows="4" cols="50" name="comment" maxlength="50" form="group-form"placeholder="Description"name='group_description'></textarea>
+						<textarea rows="4" cols="50" id="group_name" maxlength="50" form="group-form" placeholder="Description" name='group_description'></textarea>
 						
 					</div>
 				</div>
 
 				<div id="creategrpbtn" >
-					<input type='text' name ='a' hidden='true' value='createGroup' action='action.php?a=createGroup'><br /><!-- Ensures that the register control sequence is run-->
+					<input type='text' name ='a' hidden='true' value='createGroup'><br /><!-- Ensures that the register control sequence is run-->
 					<button type="submit" class="btn btn-primary btn-lg" \>Create Group</button>
 				</div>
 

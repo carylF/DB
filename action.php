@@ -9,14 +9,19 @@ if(!mysql_select_db('mybook'))
 }
 
 
-
-
- if($_GET['a'] == 'login')
+if($_GET['a'] == 'login')
 {
+	
 	$cred_verify_qstring =  "SELECT * 
 			         	   FROM users 
 			         	   WHERE email = '$_POST[email]' AND pword ='$_POST[pword]'";  // Login query 
 	$cred_verify_query = mysql_query($cred_verify_qstring,$connect);
+	
+	$cred_userid_qstring = "SELECT userId
+							FROM users
+							WHERE email = '$_POST[email]' AND pword ='$_POST[pword]'"; //Query to retrieve userId
+	$cred_userid_query = mysql_query($cred_userid_qstring,$connect);
+			
 	if(!$cred_verify_query) 			//Verification of the query
 	{
 		die('Query Failure'.mysql_error($connect));
@@ -25,18 +30,16 @@ if(!mysql_select_db('mybook'))
 	{
 		if($row =mysql_fetch_array($cred_verify_query,MYSQL_ASSOC))
 		{
-			while($row)
-			{
 				if(($_POST['email'] == $row['email']) && ($_POST['pword'] == $row['pword']))
 				{
-
+					$_SESSION['userid']= $row['userId'];
 					$_SESSION['email'] = $row['email'];
 					$_SESSION['pword'] = $row['pword'];
 					
 					echo ('Login Successful');
 					echo('<script>location.replace("homepage.php")</script>');
+					
 				}
-			}
 		}
 		else
 		{
@@ -90,14 +93,16 @@ else if ($_GET['a'] == 'createGroup')
 				group_name,
 				group_type,
 				group_description,
+				group_owner
 			) 
 			VALUES
 			(
 				'$_POST[group_name]',
 				'$_POST[group_type]',
-				'$_POST[group_description]')";
-
-
+				'$_POST[group_description]',
+				'$_SESSION[userid]'
+			)";
+	
 	$groups_query = mysql_query($insert_qstring, $connect);
 
 
@@ -113,6 +118,13 @@ else if ($_GET['a'] == 'createGroup')
 	}
 }
 
+else if ($_Get['a'] =='grpview')
+{
+	$viewgrps_qstring =  "SELECT * 
+			         	   FROM groups 
+			         	   WHERE group_owner = '$_SESSION[userid]' ";  // View Groups query 
+	$viewgrps_query = mysql_query($cred_verify_qstring,$connect);
+}
 else if(!isset($_GET['a']))
 {
 	echo '<script>alert("Error occured \nReturning you to the home page")</script>';

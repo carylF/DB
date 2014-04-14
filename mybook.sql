@@ -119,25 +119,27 @@ CREATE TABLE groups
 (
 	groupId int auto_increment NOT NULL,
 	group_name varchar(25),
+	group_type varchar(25),
+	group_description varchar(50),
 	group_owner int NOT NULL,
 	primary key(groupId),
 	FOREIGN KEY (group_owner) REFERENCES users(userId) ON UPDATE CASCADE ON DELETE RESTRICT
 );
 
 /*data insertions*/
-	insert into groups (group_name) values ("Database");
-	insert into groups (group_name) values ("UWI Alumni");
-	insert into groups (group_name) values ("Computer Science");
-	insert into groups (group_name) values ("Art Society");
-	insert into groups (group_name) values ("Party Central");
-	insert into groups (group_name) values ("Robotics");
-	insert into groups (group_name) values ("Chess Society");
-	insert into groups (group_name) values ("Selfie Olympics");
-	insert into groups (group_name) values ("Young Achievers Society");
-	insert into groups (group_name) values ("Fitness Tips");
-	insert into groups (group_name) values ("Young Writers Assosiation");
-	insert into groups (group_name) values ("Designers R Us");
-	insert into groups (group_name) values ("UWI Students Guide");
+	insert into groups (group_name,group_type,group_description,group_owner) values ("Database","Academic","Forum for debaters.","1");
+	insert into groups (group_name,group_type,group_description,group_owner) values ("UWI Alumni","Society","Let's stay connected!","10");
+	insert into groups (group_name,group_type,group_description,group_owner) values ("Computer Science","Academic","Practice coding here. Challenges weekly","9");
+	insert into groups (group_name,group_type,group_description,group_owner) values ("Art Society","Society","Share your talent. Gain inspiration.","20");
+	insert into groups (group_name,group_type,group_description,group_owner) values ("Party Central","Entertainment","Hottest events all year round.","30");
+	insert into groups (group_name,group_type,group_description,group_owner) values ("Robotics","Academic","Forum for robot enthusiasts.","18");
+	insert into groups (group_name,group_type,group_description,group_owner) values ("Chess Society","Interest","Meetings on Thursdays.","25");
+	insert into groups (group_name,group_type,group_description,group_owner) values ("Selfie Olympics","Entertainment","1st Let me take a selfie!","13");
+	insert into groups (group_name,group_type,group_description,group_owner) values ("Young Achievers Society","Society","Achieve!","2");
+	insert into groups (group_name,group_type,group_description,group_owner) values ("Fitness Tips","Instructional","Feel the burn!","27");
+	insert into groups (group_name,group_type,group_description,group_owner) values ("Young Writers Association","Society","A rose by any other name...","20");
+	insert into groups (group_name,group_type,group_description,group_owner) values ("Designers R Us","Instructional","Gucci,Louis,Fendi,Prada,Vera","21");
+	insert into groups (group_name,group_type,group_description,group_owner) values ("UWI Students Guide","Instructional","Welcome Pelicans!","10");
 
 
 CREATE TABLE comments

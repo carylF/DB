@@ -39,10 +39,10 @@
 
 
       <ul class="nav navbar-nav navbar-right" id="headLinks">
-        <li><a href="#">Profile</a></li>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Friends</a></li>
-        <li><a href="#">Link</a></li>
+        <li><a href="profile.php">Profile</a></li>
+        <li><a href="homepage.php">Home</a></li>
+        <li><a href="friends.php">Friends</a></li>
+        <li><a href="action.php?a=logout">Logout</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings <b class="caret"></b></a>
           <ul class="dropdown-menu">
@@ -65,7 +65,7 @@
 			<h1>Create Group</h1>
 		</div>
 		
-		<form class="form-horizontal" role="form" id="group-form" action='action.php?a=register' method='post'>
+		<form class="form-horizontal" role="form" id="group-form" action='action.php?a=createGroup' method='post'>
 
 				<div class="form-group" id="name">
 					<label class="sr-only" for="group_name">Group Name</label>
@@ -98,7 +98,7 @@
 				</div>
 
 				<div id="creategrpbtn" >
-					<input type='text' name ='a' hidden='true' value='register'><br /><!-- Ensures that the register control sequence is run-->
+					<input type='text' name ='a' hidden='true' value='createGroup' action='action.php?a=createGroup'><br /><!-- Ensures that the register control sequence is run-->
 					<button type="submit" class="btn btn-primary btn-lg" \>Create Group</button>
 				</div>
 

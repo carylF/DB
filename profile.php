@@ -68,6 +68,7 @@
         <div id="tabs">
         <ul class="nav nav-tabs">
           <li class="active"><a href="profile.php">Timeline</a></li>
+          <li action="action.php?a=displayInfo"><a href="action.php?a=displayInfo">About</a></li>
           <li><a href="#">Friends</a></li>
           <li><a href="#">Messages</a></li>
         </ul>

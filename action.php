@@ -83,6 +83,36 @@ else if($_GET['a']=='logout')
 	echo '<script>location.replace("myBook.php");</script>';
 }
 
+else if ($_GET['a'] == 'createGroup')
+{
+	$insert_qstring = "INSERT INTO groups 
+			(
+				group_name,
+				group_type,
+				group_description,
+			) 
+			VALUES
+			(
+				'$_POST[group_name]',
+				'$_POST[group_type]',
+				'$_POST[group_description]')";
+
+
+	$groups_query = mysql_query($insert_qstring, $connect);
+
+
+	if(!$groups_query)
+	{
+		die('Query error'.mysql_error($connect));
+	}
+
+	else
+	{
+		echo"<script>alert('Group creation complete')</script>";
+		echo "<script>location.replace('groups.php')</script>";
+	}
+}
+
 else if(!isset($_GET['a']))
 {
 	echo '<script>alert("Error occured \nReturning you to the home page")</script>';

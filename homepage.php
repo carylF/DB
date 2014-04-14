@@ -5,6 +5,7 @@
     <meta http-equiv="Content-type" content="text/html;charset=ISO-8859-1" />
      <script src='behaviour.js' type='text/javascript'></script>
      <script src='//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js' type='text/javascript'></script>
+     <script src='suggestions.js' type="text/javascript"></script>
 
     <link rel="stylesheet" type="text/css" href="homepage.css" />
 
@@ -32,7 +33,7 @@
     
       <form class="navbar-form navbar-left" role="search" >
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+          <input type="text" class="form-control" placeholder="Search" onkeyup="showHint(this.value)"s>
         </div>
         <button type="submit" class="btn btn-default-lg">
          <span class="glyphicon glyphicon-search"></span>Serach</button>
@@ -61,15 +62,15 @@
 
             <div id="taskbar">
               <li>
-                <h4><span class="glyphicon glyphicon-list-alt col-md-2"></span>News Feed</h4>
+                <a href="homepage.php"><span class="glyphicon glyphicon-list-alt col-md-2"></span>News Feed</h4></a>
               </li>
 
               <li>
-                <h4><span class="glyphicon glyphicon-th-large col-md-2"></span>Groups</h4>
+                <a href="groups.php"><span class="glyphicon glyphicon-th-large col-md-2"></span>Groups</a>
               </li>
 
               <li>
-                <h4><span class="glyphicon glyphicon-user col-md-2"></span>Friends</h4>
+                <a href="friends.php"><span class="glyphicon glyphicon-user col-md-2"></span>Friends</a>
 
               </li>
             </div>
@@ -78,19 +79,17 @@
 
 
           <div class="col-md-8">
-            hi
-            <textarea class="form-control" rows="3"></textarea>
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#">Text</a></li>
+              <li><a href="#">Add Photo</a></li>
+
+            </ul>
+            <textarea class="form-control col-xs-4" rows="6"></textarea>
           </div>
 
         </div>
 
 
-       <div id = "pinfo">
-
-    <table width="400" border="10" align="center" cellpadding="10" cellspacing="1" bgcolor="#A52A2A">
-    </table>
-
-       </div>
      </div>
 
 

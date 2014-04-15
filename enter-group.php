@@ -106,37 +106,9 @@
 					</div>
 				</div>
 					  
-<<<<<<< HEAD
 				<div id="entergrpbtn" >
 					<input type='text' name ='a' hidden='true' value='enterGroup'><br /><!-- Ensures that the register control sequence is run-->
 					<button type="submit" class="btn btn-primary btn-lg" \>Enter Group</button>
-=======
-				<div  class="input-group" id="type" >
-					<label class="sr-only" for="group_type">Group Type</label>  
-					<h4>Group Type</h4>
-					<div class="col-sm-11" id="type_choice">
-						<input type="radio" name="group_type" value="Entertainment">Entertainment<br>
-						<input type="radio" name="group_type" value="Society">Society<br>
-						<input type="radio" name="group_type" value="Academic">Academic<br>
-						<input type="radio" name="group_type" value="Instructional">Instructional<br>
-					</div>
-				</div>
-
-				<div class="form-group" id="descr">
-					<label class="sr-only" for="group_description">Description</label>
-					<h4>Description</h4>
-					<p>Must be no more than 50 characters long.</p>
-					<div class="col-sm-12" id="text_area">
-						
-						<textarea rows="4" cols="50" id="group_name" maxlength="50" form="group-form" placeholder="Description" name='group_description'></textarea>
-						
-					</div>
-				</div>
-
-				<div id="creategrpbtn" >
-					<input type='text' name ='a' hidden='true' value='createGroup'><br /><!-- Ensures that the register control sequence is run-->
-					<button type="submit" class="btn btn-primary btn-lg" \>Join Group</button>
->>>>>>> b17eb24db9d40dfd15f45dcf02248cda7265e035
 				</div>
 
 		</form>

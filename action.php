@@ -205,21 +205,30 @@ else if ($_GET['a']=='addphoto')
   }
 
 }
-<<<<<<< HEAD
 else if($_GET['a']=='enterGroup')
 {
-	$viewgrpid_qstring =  "SELECT * 
-			         	   FROM groups 
-			         	   WHERE group_owner = '$_SESSION[userid]' ";  // View Groups query 
-	$viewgrpid_query = mysql_query($viewgrps_qstring,$connect);
+	$checkingrp_qstring = "SELECT date_added
+						   FROM groups JOIN add_to_group 
+						   ON groups.groupId=add_to_group.groupId
+						   WHERE $_POST[group_name]=add_to_group.group_name AND $_SESSION[userid]=add_to_group.userId"
+	$checkingrp_query = mysql_query($checking_qstring,$connect);
 	
-	if(!$viewgrps_query) 			//Verification of the query
+	if(!$checkingrp_querry)
+	{
+	
+	}
+	$viewgrpid_qstring =  "SELECT  groupId
+			         	   FROM groups 
+			         	   WHERE $_POST[group_name] = 'group_name' ";  // View Groups query 
+	$viewgrpid_query = mysql_query($viewgrpid_qstring,$connect);
+	
+	if(!$viewgrpid_query) 			//Verification of the query
 	{
 		die('Query Failure'.mysql_error($connect));
 	}
 	else
 	{
-		if($row =mysql_fetch_array($viewgrps_query,MYSQL_ASSOC))
+		if($row =mysql_fetch_array($viewgrpid_query,MYSQL_ASSOC))
 		{
 				if($_SESSION['userid'] == $row['group_owner'])
 				{
@@ -248,25 +257,23 @@ else if($_GET['a']=='enterGroup')
 			(
 				'$_SESSION['userid']',
 				'$_SESSION['group_ID']',
-				'getdate()'
+				'NOW()'
 			)";
 	
-	$groups_query = mysql_query($insert_qstring, $connect);
+	$insert_query = mysql_query($insert_qstring, $connect);
 
 
-	if(!$groups_query)
+	if(!$insert_query)
 	{
 		die('Query error'.mysql_error($connect));
 	}
 
 	else
 	{
-		echo"<script>alert('Group creation complete')</script>";
+		echo"<script>alert('added to group')</script>";
 		echo "<script>location.replace('groups.php')</script>";
 	}
 }
-=======
->>>>>>> b17eb24db9d40dfd15f45dcf02248cda7265e035
 else if(!isset($_GET['a']))
 {
 	echo '<script>alert("Error occured \nReturning you to the home page")</script>';

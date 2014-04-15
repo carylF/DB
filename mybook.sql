@@ -7,6 +7,8 @@ CREATE TABLE users
 	lname varchar(200),
 	email varchar(200),
 	pword varchar(25),
+	dob DATE,
+
 	primary key(userId)
 );
 

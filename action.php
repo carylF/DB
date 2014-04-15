@@ -2,7 +2,8 @@
 session_start();
 header('Access-Control-Allow-Origin:*');
 $connect = mysql_connect('localhost','admin','admin123');
-$recipient_id; 
+
+
 if(!mysql_select_db('mybook'))
 {
 	die('Failure selecting Database'. mysql_error());
@@ -20,7 +21,9 @@ if($_GET['a'] == 'login')
 	$cred_userid_qstring = "SELECT userId
 							FROM users
 							WHERE email = '$_POST[email]' AND pword ='$_POST[pword]'"; //Query to retrieve userId
+
 	$cred_userid_query = mysql_query($cred_userid_qstring,$connect);
+
 			
 	if(!$cred_verify_query) 			//Verification of the query
 	{
@@ -50,28 +53,30 @@ if($_GET['a'] == 'login')
 }
 else if ($_GET['a'] == 'register')
 {
-	$insert_qstring = "INSERT INTO users 
+	$insert_qstring = "INSERT INTO users
 			(
 				fname,
 				lname,
 				email,
-				pword
+				pword,
+				dob
 			) 
 			VALUES
 			(
 				'$_POST[fname]',
 				'$_POST[lname]',
 				'$_POST[email]',
-				'$_POST[pword]')";
-
+				'$_POST[pword]',
+				'$_POST[dob]')";
 
 	$signup_query = mysql_query($insert_qstring, $connect);
-
+	echo "$_POST[dob]";
 
 	if(!$signup_query)
 	{
 		die('Query error'.mysql_error($connect));
 	}
+
 	else
 	{
 		echo"<script>alert('Registration complete')</script>";
@@ -120,8 +125,7 @@ else if ($_GET['a'] == 'createGroup')
 
 else if ($_Get['a'] =='grpview')
 {
-	echo("HELLO");
-	
+
 	$viewgrps_qstring =  "SELECT * 
 			         	   FROM groups 
 			         	   WHERE group_owner = '$_SESSION[userid]' ";  // View Groups query 
@@ -157,6 +161,49 @@ else if ($_Get['a'] =='grpview')
 else if($_GET['a']=='choose_group')
 {
 	
+}
+
+else if ($_GET['a']=='addphoto')
+ {
+
+	$allowedExts = array("gif", "jpeg", "jpg", "png");
+	$temp = explode(".", $_FILES["file"]["name"]);
+	$extension = end($temp);
+
+
+	if ((($_FILES["file"]["type"] == "image/gif")
+	|| ($_FILES["file"]["type"] == "image/jpeg")
+	|| ($_FILES["file"]["type"] == "image/jpg")
+	|| ($_FILES["file"]["type"] == "image/pjpeg")
+	|| ($_FILES["file"]["type"] == "image/x-png")
+	|| ($_FILES["file"]["type"] == "image/png"))
+	&& ($_FILES["file"]["size"] < 20000)
+	&& in_array($extension, $allowedExts))
+  {
+  if ($_FILES["file"]["error"] > 0)
+    {
+    echo "Return Code: " . $_FILES["file"]["error"] . "<br>";
+    }
+  else
+    {
+
+    if (file_exists("upload/" . $_FILES["file"]["name"]))
+      {
+      echo $_FILES["file"]["name"] . " already exists. ";
+      }
+    else
+      {
+      move_uploaded_file($_FILES["file"]["tmp_name"],
+      "upload/" . $_FILES["file"]["name"]);
+      echo "Stored in: " . "upload/" . $_FILES["file"]["name"];
+      }
+    }
+  }
+	else
+  {
+  echo "Invalid file";
+  }
+
 }
 else if(!isset($_GET['a']))
 {

@@ -80,10 +80,9 @@
 
           <div class="col-md-8">
             <ul class="nav nav-tabs">
-              <li class="active"><a href="#">Text</a></li>
-              <li><a href="#">Add Photo</a></li>
-
-            </ul>
+            <li class="active"><a href="#">Text</a></li>
+            <li><a href="#">Photo</a></li>
+          </ul>
             <textarea class="form-control col-xs-4" rows="6"></textarea>
           </div>
 

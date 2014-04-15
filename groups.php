@@ -60,7 +60,7 @@
 
             <div id="taskbar">
               <li>
-                <h4><span class="glyphicon glyphicon-list-alt col-md-2"></span>News Feed</h4>
+                <a href="homepage.php"><span class="glyphicon glyphicon-list-alt col-md-2"></span>News Feed</h4></a>
               </li>
 
               <li>
@@ -68,7 +68,7 @@
               </li>
 
               <li>
-                <h4><span class="glyphicon glyphicon-user col-md-2"></span>Friends</h4>
+                <a href="friends.php"><span class="glyphicon glyphicon-user col-md-2"></span>Friends</a>
 
               </li>
             </div>

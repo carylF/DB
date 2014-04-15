@@ -205,6 +205,7 @@ else if ($_GET['a']=='addphoto')
   }
 
 }
+<<<<<<< HEAD
 else if($_GET['a']=='enterGroup')
 {
 	$viewgrpid_qstring =  "SELECT * 
@@ -264,6 +265,8 @@ else if($_GET['a']=='enterGroup')
 		echo "<script>location.replace('groups.php')</script>";
 	}
 }
+=======
+>>>>>>> b17eb24db9d40dfd15f45dcf02248cda7265e035
 else if(!isset($_GET['a']))
 {
 	echo '<script>alert("Error occured \nReturning you to the home page")</script>';

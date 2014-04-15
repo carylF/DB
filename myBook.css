@@ -1,3 +1,10 @@
+#logo
+{
+	clear:both;
+	width:50px;
+	height:50px;
+	
+}
 #body{
   background-image: url("/DB/images/background.jpg");
 }

@@ -75,7 +75,7 @@ else if ($_GET['a'] == 'register')
 	else
 	{
 		echo"<script>alert('Registration complete')</script>";
-		echo "<script>location.replace('homepage.php')</script>";
+		echo "<script>location.replace('sign-in.php')</script>";
 	}
 }
 
@@ -120,10 +120,43 @@ else if ($_GET['a'] == 'createGroup')
 
 else if ($_Get['a'] =='grpview')
 {
+	echo("HELLO");
+	
 	$viewgrps_qstring =  "SELECT * 
 			         	   FROM groups 
 			         	   WHERE group_owner = '$_SESSION[userid]' ";  // View Groups query 
-	$viewgrps_query = mysql_query($cred_verify_qstring,$connect);
+	$viewgrps_query = mysql_query($viewgrps_qstring,$connect);
+	
+	if(!$viewgrps_query) 			//Verification of the query
+	{
+		die('Query Failure'.mysql_error($connect));
+	}
+	else
+	{
+		if($row =mysql_fetch_array($viewgrps_query,MYSQL_ASSOC))
+		{
+				if($_SESSION['userid'] == $row['group_owner'])
+				{
+					$_SESSION['group_name']= $row['group_name'];
+					$_SESSION['group_type'] = $row['group_type'];
+					$_SESSION['group_desc'] = $row['group_description'];
+					
+					echo($_SESSION['group_name']);
+					echo($_SESSION['group_type']);
+					echo($_SESSION['group_desc']);
+					//echo('<script>location.replace("view_groups.php")</script>');
+					
+				}
+		}
+		else
+		{
+			echo "<script>alert('No Groups');</script>";
+		}
+	}
+}
+else if($_GET['a']=='choose_group')
+{
+	
 }
 else if(!isset($_GET['a']))
 {

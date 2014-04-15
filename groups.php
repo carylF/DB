@@ -88,10 +88,17 @@
             <div>
               <h2>View groups</h2>
               <p>
-               <a href="view_groups.php"> <button name = 'a' value='grpview'type="submit" class="btn btn-primary btn-lg" > View Groups</button></a>
+              <a href="view_groups.php"> <button type="submit" class="btn btn-primary btn-lg" > View Groups</button></a>
               </p>
             </div>
-
+			
+			<div>
+              <h2>Enter a Group</h2>
+              <p>
+              <a href="enter-group.php"> <button type="submit" class="btn btn-primary btn-lg" > Enter Group</button></a>
+              </p>
+            </div>
+			
           </div>
 
         </div>

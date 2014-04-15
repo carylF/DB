@@ -274,6 +274,40 @@ else if($_GET['a']=='enterGroup')
 		echo "<script>location.replace('groups.php')</script>";
 	}
 }
+
+else if ($_GET['a']=='search')
+{
+	// echo "rgetert ";
+	// Filter
+	$keyword = trim ($_POST['keyword']);
+
+	// Select statement
+	$result = mysql_query("SELECT * FROM user WHERE fname LIKE '%" . $keyword ."%'");
+
+
+	// Display
+	if (!$result){
+	    echo "problem";
+	    exit();
+	}
+
+	while($result_arr = mysql_fetch_array( $result )) 
+	{ 
+		echo "fgdfg ";
+		echo $result_arr['fname']; 
+		echo " ";
+		echo "<br>"; 
+		echo "<br>"; 
+	}
+	$anymatches=mysql_num_rows($result); 
+	if ($anymatches == 0) 
+	{ 
+	   echo "Nothing was found that matched your query.<br><br>"; 
+	}
+	
+
+
+}
 else if(!isset($_GET['a']))
 {
 	echo '<script>alert("Error occured \nReturning you to the home page")</script>';

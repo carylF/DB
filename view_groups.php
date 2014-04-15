@@ -85,7 +85,7 @@
 			<div >
 				<p> The groups you have created are listed below:</p>
 
-					<ol>
+					
 					<?php 
 					$connect = mysql_connect('localhost','admin','admin123');
 					$recipient_id; 
@@ -94,7 +94,7 @@
 						die('Failure selecting Database'. mysql_error());
 					}
 					
-					$viewgrps_qstring =  "SELECT group_name
+					$viewgrps_qstring =  "SELECT * 
 										   FROM groups 
 										   WHERE group_owner = '$_SESSION[userid]' ";  // View Groups query 
 					$viewgrps_query = mysql_query($viewgrps_qstring,$connect);
@@ -106,19 +106,19 @@
 					else
 					{
 						while($row = mysql_fetch_array($viewgrps_query,MYSQL_ASSOC))
-						{
-							
-								$_SESSION['group_name']= $row['group_name'];	
-						
-							foreach($row as $groupname)
+						{							
+							if($_SESSION['userid'] == $row['group_owner'])
 							{
-								echo"<li>".$groupname."</li>";
+								$_SESSION['group_name']= $row['group_name'];
+								$_SESSION['group_type'] = $row['group_type'];
+								$_SESSION['group_desc'] = $row['group_description'];	
 							}
+							echo($_SESSION['group_name']);
+							echo(" ");
 								
 						}
 						
 					}?>
-					</ol>
 				
 				
 			

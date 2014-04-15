@@ -1,0 +1,23 @@
+#nav
+{
+	background-color: #DA4813;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+
+}
+
+#headLinks > li > a 
+{
+color: white;
+}
+
+#taskbar li
+{
+	display: block;
+	margin-top: 3em;
+	margin-bottom: 2.5em;
+	font-size: 20px;
+}

@@ -44,8 +44,8 @@
       <ul class="nav navbar-nav navbar-right" id="headLinks">
         <li><a href="profile.php">Profile</a></li>
         <li><a href="homepage.php">Home</a></li>
-        <li><a href="#">Friends</a></li>
-        <li><a href="#">Logout</a></li>
+        <li><a href="friends.php">Friends</a></li>
+        <li><a href="action.php?a=logout">Logout</a></li>
         
       </ul>
      </div><!-- /.navbar-collapse -->
@@ -59,18 +59,14 @@
 
         <div id="profpic">
           <img src="/DB/images/default.jpg">
-          <ul id="link">
-            <li><span class"glyphicon glyphicon-camera"></span></li>
-            <li>Change profile picture</li>
-          </ul>
+            <li><a href="add_image.html"> Change profile picture</a></li>
         </div>
 
         <div id="tabs">
         <ul class="nav nav-tabs">
           <li class="active"><a href="profile.php">Timeline</a></li>
-          <li action="action.php?a=displayInfo"><a href="action.php?a=displayInfo">About</a></li>
-          <li><a href="#">Friends</a></li>
-          <li><a href="#">Messages</a></li>
+          <li ><a href="#">About</a></li>
+          <li><a href="friends.php">Friends</a></li>
         </ul>
       </div>
 

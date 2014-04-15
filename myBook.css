@@ -80,11 +80,13 @@
 {
 	padding-left: 5px;
 	display: inline;
+	margin-left: 8em;
 }
 
 #signupbtn
 {
 	margin-top: 19px;
+	margin-left: 1em;
 }
 
 #name{

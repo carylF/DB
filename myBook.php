@@ -9,7 +9,6 @@
 
  		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="/DB/bootstrap-3.1.1-dist/css/bootstrap.css">
-		<script src"/DB/bootstrap-3.1.1-dist/js/bootstrap.js" type='text/javascript'></script>
 
 	</head>
  
@@ -96,62 +95,20 @@
 				  </div>
 			  </div>
 
-<!-- 				<div id="birthdayHead">
+ 	<!-- 			<div id="birthdayHead">
 				<h3>Birthday</h3>
-			
 
-				Split button 
-					<div id="dob">
-						<div class="btn-group">
-						  <button type="button" class="btn btn-default">Day</button>
-						  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-						    <span class="caret"></span>
-						    <span class="sr-only">Toggle Dropdown</span>
-						  </button>
-						  <ul class="dropdown-menu" role="menu">
-						    <li><a href="#">Action</a></li>
-						    <li><a href="#">Another action</a></li>
-						    <li><a href="#">Something else here</a></li>
-						    <li><a href="#">Separated link</a></li>
-						  </ul>
-						</div>
+					<div class="col-xs-5" id="dob">
+						
+						<input type="text" class="form-control" placeholder="D/M/Y" name="dob">
+					  
+					</div>  -->
 
-						<div class="btn-group">
-						  <button type="button" class="btn btn-default">Month</button>
-						  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-						    <span class="caret"></span>
-						    <span class="sr-only">Toggle Dropdown</span>
-						  </button>
-						  <ul class="dropdown-menu" role="menu">
-						    <li><a href="#">Action</a></li>
-						    <li><a href="#">Another action</a></li>
-						    <li><a href="#">Something else here</a></li>
-						    <li><a href="#">Separated link</a></li>
-						  </ul>
-						</div>
-					</div>
+				<!-- </div> -->
 
-
-
-					<div class="btn-group">
-					  <button type="button" class="btn btn-default">Year</button>
-					  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-					    <span class="caret"></span>
-					    <span class="sr-only">Toggle Dropdown</span>
-					  </button>
-					  <ul class="dropdown-menu" role="menu">
-					    <li>Action</li>
-					    <li>Another action</li>
-					    <li>Something else here</li>
-					    <li>Separated link</li>
-					  </ul>
-					</div> 
-
-				</div>-->
-
-			<div id="signupbtn" >
+			<div >
 			<input type='text' name ='a' hidden='true' value='register'><br /><!-- Ensures that the register control sequence is run-->
-		  	<button type="submit" class="btn btn-primary btn-lg" \>Sign Up</button>
+		  	<button type="submit" id="signupbtn"  class="btn btn-primary btn-lg" \>Sign Up</button>
 		  </div>
 
 			</div>
@@ -167,6 +124,8 @@
 		<div id="footer">
 			Copyright © Cary Nicole Shantel Jodi
 		</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
 	</body>
 </html>

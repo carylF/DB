@@ -248,6 +248,56 @@ else if($_GET['a'] =='choose_Group')
 	}
 	
 }
+else if($_GET['a'] =='joinGroup')
+{
+	$gname = $_POST['group_name'];
+	$userid= $_SESSION['userid'];
+	
+	$searchgrp_qstring =  "SELECT groups.groupId 
+			         	   FROM groups 
+						   WHERE groups.group_name= '$gname'";  // View Groups query 
+	$searchgrp_query = mysql_query($searchgrp_qstring,$connect);
+	
+	if(!$searchgrp_query) 			//Verification of the query
+	{
+		die('Query Failure'.mysql_error($connect));
+	}
+	else
+	{
+		if($row =mysql_fetch_array($searchgrp_query,MYSQL_ASSOC))
+		{
+				$groupid =$row['groupId'];
+			
+		}
+	}
+	
+	$insert_qstring = "INSERT INTO add_to_group 
+			(
+				userId,
+				groupId,
+				date_added
+			) 
+			VALUES
+			(
+				'$_SESSION[userid]',
+				'$groupid',
+				'NOW()'
+			)";
+	
+	$insert_query = mysql_query($insert_qstring, $connect);
+
+
+	if(!$insert_query)
+	{
+		die('Query error'.mysql_error($connect));
+	}
+
+	else
+	{
+		echo"<script>alert('You are now a member!')</script>";
+		echo "<script>location.replace('groups.php')</script>";
+	}
+}
 else if(!isset($_GET['a']))
 {
 	echo '<script>alert("Error occured \nReturning you to the home page")</script>';

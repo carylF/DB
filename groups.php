@@ -56,7 +56,7 @@ include('header2.html');
             </div>
 
             <div>
-              <h2>View groups</h2>
+              <h2>View groups you made</h2>
               <p>
               <a href="view_groups.php"> <button type="submit" class="btn btn-primary btn-lg" > View Groups</button></a>
               </p>
@@ -69,7 +69,12 @@ include('header2.html');
               </p>
             </div>
 			
-          </div>
+			<div>
+              <h2>Join a Group</h2>
+              <p>
+              <a href="join_group.php"> <button type="submit" class="btn btn-primary btn-lg" > Join Group</button></a>
+              </p>
+            
 
         </div>
 

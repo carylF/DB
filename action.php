@@ -47,7 +47,7 @@ if($_GET['a'] == 'login')
 		else
 		{
 			echo "<script>alert('Incorrect email address or password');
-					location.replace('myBook.php');</script>";
+					location.replace('register.php');</script>";
 		}
 	}
 }
@@ -70,7 +70,6 @@ else if ($_GET['a'] == 'register')
 				'$_POST[dob]')";
 
 	$signup_query = mysql_query($insert_qstring, $connect);
-	echo "$_POST[dob]";
 
 	if(!$signup_query)
 	{
@@ -205,14 +204,90 @@ else if ($_GET['a']=='addphoto')
   }
 
 }
-else if($_GET['a']=='enterGroup')
-{
+// else if($_GET['a']=='enterGroup')
+// {
+// 	$checkingrp_qstring = "SELECT date_added
+// 						   FROM groups JOIN add_to_group 
+// 						   ON groups.groupId=add_to_group.groupId
+// 						   WHERE $_POST[group_name]=add_to_group.group_name AND $_SESSION[userid]=add_to_group.userId"
+// 	$checkingrp_query = mysql_query($checking_qstring,$connect);
 	
-}
+// 	if(!$checkingrp_query)
+// 	{
+// 			die('Query Failure'.mysql_error($connect));
+// 	}
+// 	else
+// 	{
+// 		if($row =mysql_fetch_array($checkingrp_query,MYSQL_ASSOC))
+// 		{
+				
+// 		}
+// 	}
+// 	else
+// 	{
+// 		echo "<script>alert('You are not a member of this group!');</script>";
+// 	}
+// 	$viewgrpid_qstring =  "SELECT  groupId
+// 			         	   FROM groups 
+// 			         	   WHERE $_POST[group_name] = 'group_name' ";  // View Groups query 
+// 	$viewgrpid_query = mysql_query($viewgrpid_qstring,$connect);
+	
+// 	if(!$viewgrpid_query) 			//Verification of the query
+// 	{
+// 		die('Query Failure'.mysql_error($connect));
+// 	}
+// 	else
+// 	{
+// 		if($row =mysql_fetch_array($viewgrpid_query,MYSQL_ASSOC))
+// 		{
+// 				if($_SESSION['userid'] == $row['group_owner'])
+// 				{
+// 					$_SESSION['group_name']= $row['group_name'];
+// 					$_SESSION['group_type'] = $row['group_type'];
+// 					$_SESSION['group_desc'] = $row['group_description'];
+					
+// 					echo($_SESSION['group_name']);
+// 					echo($_SESSION['group_type']);
+// 					echo($_SESSION['group_desc']);
+// 					//echo('<script>location.replace("view_groups.php")</script>');
+					
+// 				}
+// 		}
+// 		else
+// 		{
+// 			echo "<script>alert('No Groups');</script>";
+// 		}
+// 	$insert_qstring = "INSERT INTO add_to_group
+// 			(
+// 				userId,
+// 				groupId,
+// 				date_added
+// 			) 
+// 			VALUES
+// 			(
+// 				'$_SESSION['userid']',
+// 				'$_SESSION['group_ID']',
+// 				'NOW()'
+// 			)";
+	
+// 	$insert_query = mysql_query($insert_qstring, $connect);
+
+
+// 	if(!$insert_query)
+// 	{
+// 		die('Query error'.mysql_error($connect));
+// 	}
+
+// 	else
+// 	{
+// 		echo"<script>alert('added to group')</script>";
+// 		echo "<script>location.replace('groups.php')</script>";
+// 	}
+// }
 else if(!isset($_GET['a']))
 {
 	echo '<script>alert("Error occured \nReturning you to the home page")</script>';
-	echo '<script>location.replace("myBook.php")</script>';
+	echo '<script>location.replace("register.php")</script>';
 }
 
 ?>

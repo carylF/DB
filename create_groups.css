@@ -1,3 +1,11 @@
+
+#container
+{
+	margin-left: 7em;
+	margin-right: 7em;
+	margin-top: 3em;
+}
+
 p{
  display:inline;
  padding-left: 48px;
@@ -13,36 +21,20 @@ p{
 	font-weight: bold;
 	text-align: center;
 }
-#nav
-{
-	background-color: #DA4813;
-	margin-bottom: 10px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	border-bottom-right-radius: 6px;
-	border-bottom-left-radius: 6px;
 
+
+.col-md-8
+{
+	height: 800px;
+	color: white;
+	text-align: center;
+	background-color: transparent;
 }
 
-#headLinks > li > a 
-{
-color: white;
-}
-
-#createG
-{
-
-	float: center;
-  text-align: center;
-  padding-left: 10px;
-  margin-right: 60px;
-  
-
-}
 
 #group-form
 {
-	margin-left: 32em;
+	margin-left: 11em;
 	background-color: #C5C3C2;
 	padding: 24px 23px 20px 32px;
 	border-radius: 10px;
@@ -79,12 +71,7 @@ color: white;
 #text_area{
 	padding-top: 15px;
 }
-img
-{
-	width: 600px;
-	height: 450px;
 
-}
 
 #footer
 {

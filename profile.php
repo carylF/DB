@@ -9,8 +9,6 @@ include('header2.html');
     <?php session_start() ?>
     <title>MyBook || <?php echo $_SESSION['Name'] ;?></title>
     <meta http-equiv="Content-type" content="text/html;charset=ISO-8859-1" />
-     <script src='behaviour.js' type='text/javascript'></script>
-
      <!-- Imported local files -->
     <link rel="stylesheet" type="text/css" href="profile.css" />
     <link rel="stylesheet" type="text/css" href="header2.css">

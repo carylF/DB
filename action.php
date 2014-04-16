@@ -298,6 +298,30 @@ else if($_GET['a'] =='joinGroup')
 		echo "<script>location.replace('groups.php')</script>";
 	}
 }
+else if($_GET['a'] =='search')
+{
+	$name = $_POST['search'];
+	$userid= $_SESSION['userid'];
+	
+	$search_qstring =  "SELECT users.fname, users.lname
+						FROM users
+						WHERE CONCAT( fname, lname ) LIKE  '$name%'";  // View Groups query 
+	$search_query = mysql_query($search_qstring,$connect);
+	
+	if(!$search_query) 			//Verification of the query
+	{
+		die('Query Failure'.mysql_error($connect));
+	}
+	else
+	{
+		while($row = mysql_fetch_array($search_query,MYSQL_ASSOC))
+		{
+										
+			echo"<li>".$row['fname']." ".$row['lname']."</li>";	
+		}
+			
+	}
+}
 else if(!isset($_GET['a']))
 {
 	echo '<script>alert("Error occured \nReturning you to the home page")</script>';

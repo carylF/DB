@@ -75,14 +75,9 @@ include('header2.html');
 								else
 								{
 									while($row = mysql_fetch_array($viewfrd_query,MYSQL_ASSOC))
-									{
+									{	
 										
-											$_SESSION['fname']= $row['lname'];	
-									
-										foreach($row as $fname)
-										{
-											echo"<li>".$fname."</li>";
-										}
+										echo"<li>".$row['fname']." ".$row['lname']."</li>";
 											
 									}
 									

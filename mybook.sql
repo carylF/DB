@@ -234,7 +234,7 @@ CREATE TABLE group_post
 
 CREATE TABLE profile
 (
-	userId int auto_increment NOT NULL,
+	userId int NOT NULL,
 	userName varchar(50),
 	fname varchar(50),
 	lname varchar(50),
@@ -322,10 +322,10 @@ CREATE TABLE creates
 
 CREATE TABLE comments_on
 (
-	postId int auto_increment NOT NULL,
+	postId int NOT NULL,
 	userId int  NOT NULL,
 	commentId int NOT NULL,
-	date_commented DATETIME,
+	date_commented DATETIME NOT NULL DEFAULT NOW(),
 	primary key(postId,userId,commentId),
 	FOREIGN KEY(userId) REFERENCES users(userId) ON UPDATE CASCADE ON DELETE RESTRICT,
 	FOREIGN KEY(postId) REFERENCES post(postId) ON UPDATE CASCADE ON DELETE RESTRICT,
@@ -343,16 +343,15 @@ CREATE TABLE create_content
 	primary key(userId,groupId,gpostId),
 	FOREIGN KEY(userId) REFERENCES users(userId) ON UPDATE CASCADE ON DELETE RESTRICT,
 	FOREIGN KEY(groupId) REFERENCES groups(groupId) ON UPDATE CASCADE ON DELETE RESTRICT,
-	FOREIGN KEY(gpostId) REFERENCES group_post(gpostId) ON UPDATE CASCADE ON DELETE RESTRICT
 );
 
 
 
 CREATE TABLE add_to_group
 (
-	userId int auto_increment NOT NULL,
+	userId int NOT NULL,
 	groupId int NOT NULL,
-	date_added DATETIME,
+	date_added DATETIME NOT NULL DEFAULT NOW(),
 	primary key(userId,groupId),
 	FOREIGN KEY(userId) REFERENCES users(userId) ON UPDATE CASCADE ON DELETE RESTRICT,
 	FOREIGN KEY(groupId) REFERENCES groups(groupId) ON UPDATE CASCADE ON DELETE RESTRICT
@@ -364,7 +363,7 @@ CREATE TABLE friend_of
 (
 	friend int NOT NULL,
 	friend_owner int NOT NULL,
-	type varchar(20),
+	types varchar(20),
 	primary key (friend_owner,friend),
 	FOREIGN KEY (friend_owner) REFERENCES users(userId) ON UPDATE CASCADE ON DELETE RESTRICT,
 	FOREIGN KEY (friend) REFERENCES users(userId) ON UPDATE CASCADE ON DELETE RESTRICT
@@ -395,4 +394,33 @@ CREATE TABLE add_editors_group
 );
 
 
+DELIMITER //
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `GetFriends`(IN `userID` INT)
+BEGIN
+
+SELECT users.fname,users.lname FROM `friend_of` JOIN users ON friend_of.friend_owner= users.userId WHERE friend_of.friend_owner=userID;
+
+END//
+DELIMITER ;
+
+DELIMITER //
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `GetGroups`(IN `userID` INT)
+BEGIN
+
+SELECT group_name FROM groups WHERE group_owner = userID;
+
+END//
+DELIMITER ;
+
+DELIMITER //
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `GetGroups`(IN `groupName` varchar(30))
+BEGIN
+
+SELECT SELECT title,text_body FROM group_post JOIN create_content JOIN groups ON group_post.groupId=create_content.groupId=groups.groupId WHERE groups.group_name=groupName;
+
+END//
+DELIMITER ;
 

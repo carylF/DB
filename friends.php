@@ -1,5 +1,5 @@
 <?php
-//
+
 
 
 include('header2.html');
@@ -7,8 +7,9 @@ include('header2.html');
   <head>
     <title>MyBook || <?php echo $_SESSION['Name'] ;?></title>
     <meta http-equiv="Content-type" content="text/html;charset=ISO-8859-1" />
-     <script src='behaviour.js' type='text/javascript'></script>
      <script src='//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js' type='text/javascript'></script>
+     <script src='behaviour.js' type='text/javascript'></script>
+
 
     <link rel="stylesheet" type="text/css" href="header2.css" />
     <link rel="stylesheet" type="text/css" href="homepage.css">
@@ -21,58 +22,82 @@ include('header2.html');
  
   <body id='body'>
 
-
      <div id = "container">
 
-        <div id ="uinfo">
-            <img src="DB/images/tablet">
-	 		<?php
-				$connect = mysql_connect('localhost','admin','admin123');
-				$recipient_id; 
-				if(!mysql_select_db('mybook'))
-					{
-						die('Failure selecting Database'. mysql_error());
-					}
-				else
-				{
-					$result = $_SESSION['USERS'];
-					if($rows=mysql_fetch_array($result))
-					{
-						echo "First Name:, {$rows['fname']} <br>".
-							"Last Name: {$rows['lname']} <br> ".
-							"Email: {$rows['email']} <br> ";
-					}
-				}
-			?> 
-			<a href="profile.php">
-			<div id="footer">
+        <div class="row">
+          <div class="col-md-4">
+            <div id ="uinfo">
+              <img src="/DB/images/tablet.jpg">
+            </div>
 
-      Copyright © Cary Nicole Shantel Jodi
-    </div>
-       </div>
-	   
-       <div id = "pinfo">
-	   <?php
-			$sql="SELECT fname, lname FROM friend_of JOIN users
-				  ON friend_of.friend_owner = profile.userId
-				  WHERE friend_of.friend = users.userId";
-				$result=mysql_query($sql);
-				if(! $result)
-				{
-					die('Could not get data: ' . mysql_error());
-				}
-				else
-				{
-					while ($rows=mysql_fetch_array($result));
-					{
-						echo "{$rows['fname']} < br>".
-						"{$rows['fname']} <br>";
-					}
-				}
-				mysql_close();
-		?>
+            <div id="taskbar">
+              <li>
+                <a href="homepage.php"><span class="glyphicon glyphicon-list-alt col-md-2"></span>News Feed</h4></a>
+              </li>
 
-       </div>
-     </div>
-	</body>
+              <li>
+                <a href="groups.php"><span class="glyphicon glyphicon-th-large col-md-2"></span>Groups</a>
+              </li>
+
+              <li>
+                <a href="friends.php"><span class="glyphicon glyphicon-user col-md-2"></span>Friends</a>
+
+              </li>
+            </div>
+          
+          </div>
+			<div class="col-md-6">
+
+						<div id="heading">
+							<h1>Your Friends</h1>
+						</div>
+						
+						<div >
+							<p> You friends are listed below:</p>
+
+								<ol>
+								<?php 
+								session_start();
+								$connect = mysql_connect('localhost','admin','admin123');
+								$recipient_id; 
+								if(!mysql_select_db('mybook'))
+								{
+									die('Failure selecting Database'. mysql_error());
+								}
+								$userid = $_SESSION['userid'];
+								$viewfrd_qstring =  "CALL GetFriends($userid)"; // View Groups query 
+								$viewfrd_query = mysql_query($viewfrd_qstring,$connect);
+								
+								if(!$viewfrd_query) 			//Verification of the query
+								{
+									die('Query Failure'.mysql_error($connect));
+								}
+								else
+								{
+									while($row = mysql_fetch_array($viewfrd_query,MYSQL_ASSOC))
+									{
+										
+											$_SESSION['fname']= $row['lname'];	
+									
+										foreach($row as $fname)
+										{
+											echo"<li>".$fname."</li>";
+										}
+											
+									}
+									
+								}?>
+								</ol>
+							
+							
+						
+						</div>
+
+			 </div>
+
+
+  <div id="footer">
+     Copyright © Cary Nicole Shantel Jodi
+   </div>
+  </body>
 </html>

@@ -35,6 +35,7 @@ include('header2.html');
           <li class="active"><a href="profile.php">Timeline</a></li>
           <li ><a href="#">About</a></li>
           <li><a href="friends.php">Friends</a></li>
+          <li><a href="editpro.php">Edit</a></li>
         </ul>
       </div>
 

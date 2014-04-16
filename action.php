@@ -86,9 +86,9 @@ else if ($_GET['a'] == 'register')
 
 else if($_GET['a']=='logout')
 {
-	echo '<script>alert("Logging you out '.$_SESSION['Name'].'")</script>';
+	echo '<script>alert("Logging you out '.$_SESSION['userId'].'")</script>';
 	session_destroy();
-	echo '<script>location.replace("myBook.php");</script>';
+	echo '<script>location.replace("register.php");</script>';
 }
 
 else if ($_GET['a'] == 'createGroup')

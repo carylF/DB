@@ -1,17 +1,23 @@
-<!DOCTYPE html >
-<html >
-	<head>
-		<!--<?php session_start() ?> -->
-		<title> || <?php echo $_SESSION['Name'] ;?></title>
-		<meta http-equiv="Content-type" content="text/html;charset=ISO-8859-1" />
-		 <!--<script src='behaviour.js' type='text/javascript'></script>-->
- 		<link rel="stylesheet" type="text/css" href="myBook.css" />
+<?php
+//
 
- 		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="/DB/bootstrap-3.1.1-dist/css/bootstrap.css">
-		<script src"/DB/bootstrap-3.1.1-dist/js/bootstrap.js" type='text/javascript'></script>
 
-	</head>
+include('header2.html');
+?>
+  <head>
+    <title>MyBook || <?php echo $_SESSION['Name'] ;?></title>
+    <meta http-equiv="Content-type" content="text/html;charset=ISO-8859-1" />
+     <script src='behaviour.js' type='text/javascript'></script>
+     <script src='//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js' type='text/javascript'></script>
+
+    <link rel="stylesheet" type="text/css" href="header2.css" />
+    <link rel="stylesheet" type="text/css" href="homepage.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/DB/bootstrap-3.1.1-dist/css/bootstrap.css">
+    <script src"/DB/bootstrap-3.1.1-dist/js/bootstrap.js" type='text/javascript'></script>
+
+  </head>
  
 	<body id='body'>
 

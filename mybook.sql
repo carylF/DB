@@ -151,52 +151,7 @@ CREATE TABLE comments
 	primary key(commentId)
 );
 
-/*data insertions*/
-	-- insert into comments(commentId,content) values ("","What a gwaan?");
-	-- insert into comments(commentId,content) values ("","Hey long time dont see");
-	-- insert into comments(commentId,content) values ("","I finally got your message");
-	-- insert into comments(commentId,content) values ("","Feeling sad today");
-	-- insert into comments(commentId,content) values ("","Why does this keep happenning to me?");
-	-- insert into comments(commentId,content) values ("","Who's exsited for the new movie ?");
-	-- insert into comments(commentId,content) values ("","Need some help guys");
-	-- insert into comments(commentId,content) values ("","Is anyone ready ?");
-	-- insert into comments(commentId,content) values ("","Feeling great today :)");
-	-- insert into comments(commentId,content) values ("","I'm so sleepy");
-	-- insert into comments(commentId,content) values ("","This is amazing");
-	-- insert into comments(commentId,content) values ("","This project is rediculus. Noone knows what to do >:/ ");
-	-- insert into comments(commentId,content) values ("","Who knows how to answer question 3 ?");
-	-- insert into comments(commentId,content) values ("","I'm hungry");
-	-- insert into comments(commentId,content) values ("","This is taking to long man");
-	-- insert into comments(commentId,content) values ("","He's right you know");
-	-- insert into comments(commentId,content) values ("","You messed up .. big time ..");
-	-- insert into comments(commentId,content) values ("","See you at class tomorrow");
-	-- insert into comments(commentId,content) values ("","Better be safe than sorry lo");
-	-- insert into comments(commentId,content) values ("","Guys, why is it so hot ??? ");
-	-- insert into comments(commentId,content) values ("","Well this is awkward...");
-	-- insert into comments(commentId,content) values ("","This is stupid, but I still laughed.");
-	-- insert into comments(commentId,content) values ("","THE PARTY WAS AMAZING !!!");
-	-- insert into comments(commentId,content) values ("","i would love to do a short film like this. they did a great job.");
-	-- insert into comments(commentId,content) values ("","Can we not, please??");
-	-- insert into comments(commentId,content) values ("","Keeping it surreal.");
-	-- insert into comments(commentId,content) values ("","Everyone thinks I'm anti-social just because I want to stay sober");
-	-- insert into comments(commentId,content) values ("","well son, it all started when your father liked my selfie");
-	-- insert into comments(commentId,content) values ("","Easter and study break is exactly around the corner.... so happy...");
-	-- insert into comments(commentId,content) values ("","That black dress though!!! ");
-	-- insert into comments(commentId,content) values ("","I like crazy XD *giggles*");
-	-- insert into comments(commentId,content) values (""," “You don’t need water to feel like you’re drowning, do you?”— Jodi Picoult");
-	-- insert into comments(commentId,content) values ("","food is more important than internet");
-	-- insert into comments(commentId,content) values ("","Ninja Man is soooo siick though");
-	-- insert into comments(commentId,content) values ("","this is why aliens wont talk to us.. ");
-	-- insert into comments(commentId,content) values ("","The calm before the storm...");
-	-- insert into comments(commentId,content) values ("","The designs look greate ..");
-	-- insert into comments(commentId,content) values ("","well here goes everything ");
-	-- insert into comments(commentId,content) values ("","need to get cracking on thoes measurments");
-	-- insert into comments(commentId,content) values ("","how fast is the processor?");
-	-- insert into comments(commentId,content) values ("","is all the coding for the finall assignment done ?");
-	-- insert into comments(commentId,content) values ("","C is way better than Java");
-	-- insert into comments(commentId,content) values ("","you missed that simple move ..  thats wy you lost the match");
-	-- insert into comments(commentId,content) values ("","here we go again");
-	-- insert into comments(commentId,content) values ("","the tension is so high ");
+
 
 
 CREATE TABLE group_post
@@ -207,29 +162,8 @@ CREATE TABLE group_post
 	g_image_path varchar(50),
 	text_body varchar(500),
 	primary key(gpostId)
+	
 );
-
-/*data insertions*/
-	-- insert into group_post(title, g_post_type, g_image_path, text_body) values ("Meeting", "Text", "", "We need to meet as soon as possible");/*group1*/
-	-- insert into group_post(title, g_post_type, g_image_path, text_body) values ("Movies", "Photo", "", "The university's first feature will will be out soon");/*group2*/
-	-- insert into group_post(title, g_post_type, g_image_path, text_body) values ("Relax", "Text", "", "Keep Calm and Code");/*group3*/
-	-- insert into group_post(title, g_post_type, g_image_path, text_body) values ("Study Session", "Text", "", "There will be a marathon study session net week");/*group9*/
-	-- insert into group_post(title, g_post_type, g_image_path, text_body) values ("Trip", "Photo", "", "The trip to Mobay was awesome");/*group5*/
-	-- insert into group_post(title, g_post_type, g_image_path, text_body) values ("Almost done", "Photo", "", "we're at the final stages of development");/*group6*/
-	-- insert into group_post(title, g_post_type, g_image_path, text_body) values ("Points standing", "Photo", "", "The club is currently leading in the national chess compotision");/*group7*/
-	-- insert into group_post(title, g_post_type, g_image_path, text_body) values ("Paint festival", "Text", "", "Who's ready for the paint festival ??");/*group5*/
-	-- insert into group_post(title, g_post_type, g_image_path, text_body) values ("New Skethes", "Photo", "", "Here are some of my lates sketches");/*group12*/
-	-- insert into group_post(title, g_post_type, g_image_path, text_body) values ("Designs", "Photo", "", "any ideas for the New T2000 Modle ??");/*group6*/
-	-- insert into group_post(title, g_post_type, g_image_path, text_body) values ("Competition", "Text", "", "The second annual Doodle competition will start shortly. Keep checking in");/*group12*/
-	-- insert into group_post(title, g_post_type, g_image_path, text_body) values ("Practise", "Text", "", "Keep working hard guys, Practise makes perfect");/*group7*/
-	-- insert into group_post(title, g_post_type, g_image_path, text_body) values ("Awesomeness", "Text", "", "Closing night was so wild");/*group5*/
-	-- insert into group_post(title, g_post_type, g_image_path, text_body) values ("Excrllence", "Text", "", "Last night three of our members reseaved the national awards");/*group9*/
-	-- insert into group_post(title, g_post_type, g_image_path, text_body) values ("New painting", "Photo", "", "hot o the presses guys :) ");/*group12*/
-	-- insert into group_post(title, g_post_type, g_image_path, text_body) values ("Competition Soon", "Photo", "", "Look out for the national writer's challenge in a few weeks");/*group11*/
-	-- insert into group_post(title, g_post_type, g_image_path, text_body) values ("Code Update", "Text", "", "the programmers of the last model needs adjustment");/*group6*/
-	-- insert into group_post(title, g_post_type, g_image_path, text_body) values ("Brand new equipment", "Photo", "", "Thanks to all your effforts we will finally have new equipment");/*group7*/
-	-- insert into group_post(title, g_post_type, g_image_path, text_body) values ("First Place", "Photo", "", "Our representative in the national championships is currently in first place");/*group7*/
-	-- insert into group_post(title, g_post_type, g_image_path, text_body) values ("Coding Marathon", "Text", "", "Our coding marthon will be at the end of the month");/*group3*/
 
 
 CREATE TABLE profile
@@ -245,74 +179,12 @@ CREATE TABLE profile
 	FOREIGN KEY(userId) REFERENCES users(userId) ON UPDATE CASCADE ON DELETE RESTRICT
 );
 
-/*data insertions*/
-	insert into profile (userName, fname, lname, email, dob) values("ShellyBiz","Shelly-Ann","Gordon", "shelly_biz@yahoo.com", "12/06/1990");
-	insert into profile (userName, fname, lname, email, dob) values("NikkyJ","Nicole","Johnson", "nikkyj@gmail.com", "01/12/1992");
-	insert into profile (userName, fname, lname, email, dob) values("Rosinine","Rosini","Robinson", "sheldonshell@hotmail.com", "05/08/1991");
-	insert into profile (userName, fname, lname, email, dob) values("TooCuteShanty","Shantel","Thompson", "shantellee@yahoo.com", "19/06/1983");
-	insert into profile (userName, fname, lname, email, dob) values("JasonJay","Jason","Johnson", "jayjay@gmail.com", "22/02/1984");
-	insert into profile (userName, fname, lname, email, dob) values("BadBoyDJ","Damion","Ford", "forditute@yahoo.com", "18/11/1990");
-	insert into profile (userName, fname, lname, email, dob) values("MaryJane","Mary-Jane","Jones","berryberry@hotmail.com","09/12/1976");
-	insert into profile (userName, fname, lname, email, dob) values("Marcus","Marcus","Smith","marcus.S@hotmail.com","02/02/1981");
-	insert into profile (userName, fname, lname, email, dob) values("Andrew","Andrew","Sham","Adrewshams@hotmail.com","06/12/1987");
-	insert into profile (userName, fname, lname, email, dob) values("Breton","Breton","Davis","davis.b@hotmail.com","25/02/1994");
-	insert into profile (userName, fname, lname, email, dob) values("BlueSteel","Oraine","Wallace","rainywallace@hotmail.com","12/12/1992");
-	insert into profile (userName, fname, lname, email, dob) values("Jermaine","Jermaine","Flemmings","jrf@hotmail.com","03/05/1993");
-	insert into profile (userName, fname, lname, email, dob) values("Salome'.F","Salome'","Fransis","S.fransis@hotmail.com","08/11/1993");
-	insert into profile (userName, fname, lname, email, dob) values("Amanda","Amanda","Fransis","amandafrannie@gmail.com","17/07/1988");
-	insert into profile (userName, fname, lname, email, dob) values("King889","Darian","Kingsly","KinglyD@yahoo.com","11/07/1993");
-	insert into profile (userName, fname, lname, email, dob) values("Swift477","Tiara","Johnson","tj.johnson@hotmail.com","23/06/1990");
-	insert into profile (userName, fname, lname, email, dob) values("Terrie","Terrie-Lee","Fairweather","fair_Lee@yahoo.com","15/12/1995");
-	insert into profile (userName, fname, lname, email, dob) values("Miss NeaNae","Samantha","Smith","SammySmith@gmail.com","12/12/1994");
-	insert into profile (userName, fname, lname, email, dob) values("King Castle","Adrian","Castle","kingcastle@hotmail.com","08/08/1987");
-	insert into profile (userName, fname, lname, email, dob) values("Akeel.B","Akeel","Brown","Akeel.B.jr@hotmail.com","18/09/1990");
-	insert into profile (userName, fname, lname, email, dob) values("Mr.Dweet Right","Mark","Anthony","markiemark@gmail.com","14/02/1983");
-	insert into profile (userName, fname, lname, email, dob) values("Chad","Chad","Ford","CFord@yahoo.com","09/11/1984");
-	insert into profile (userName, fname, lname, email, dob) values("Starbwoii 99","Anique","Mckie","purpleflower@gmail.com","12/4/1993");
-	insert into profile (userName, fname, lname, email, dob) values("Queen.B","Brittany","Knight","BBknight@hotmail.com","01/02/1993");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("SuperDuperChad","Chad","Bartley","superchad@hotmail.com","04/04/1994");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("TheRealRikiCarti","Richard","Carttie","richkid@gmail.com","27/04/1993");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("Goku J.r","Valence","Small","notsosmall@yahoo.com","11/11/1996");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("Wildflower","Jamie","Lee","j-lee@yahoo.com","03/03/1989","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("NahNUHGYALRICK","Ricardo","Fuller","rickfuller@gmail.com","06/09/1992","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("Richard","Richard","Rose","richroses@gmail.com","16/01/1993","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("Techie0101","Micheal","Adams","mrAdams@hotmail.com","12/08/1988","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("Tara","Tara","Sham","babysham@gmail.com","08/07/1992","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("Nick#1","Nick","Freeman","free-nick@yahoo.com","19/09/1992","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("BlueRose34","Hopeton","Sinclair","Hope@yahoo.com","23/09/1995","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("D.P","Danielle","Philips","phillieD@hotmail.com","13/05/1991","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("Flowerchild Anna","Anna","Rowe","flowerchild@hotmail.com","03/06/1993","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("Original Flawsah","Alazo","Brown","lanzoB@gmail.com","12/12/1989","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("Adam Rhys","Adam","Rhys","rhysofAdam@hotmail.com","26/06/1992","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("Jo-Jo Dice","Joseph","Jordon","jojo@gmail.com","11/03/1991","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("Sunny-David","David","Summerville","sunnyVilla@yahoo.com","09/10/1985","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("Samantha Forbs","Samantha","Forbs","sammyforbs@hotmail.com","08/07/1992","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("Tim Forbs","Timothy","Forbs","timmyforbs@hotmail.com","19/12/1993","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("Zohoori-Dossa","Zohoori","Campbell","campZohoori@gmail.com","15/06/1995","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("Sammy Amor","Samanth","Rae","raeofsunshine@yahoo.com","29/12/1993","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("Olympian God 55","Jordan","Goodman",".Godman@yahoo.com","01/01/1990","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("Yakira","Ashley","Manderson","itsAshley@gmail.com","03/05/1988","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("Queenship","Rashana","King","queenshofkings@hotmail.com","09/05/1994","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("Victor Stone","Victor","Stone","MrStone@hotmail.com","03/09/1990","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("Stephen","Stephen","Wilson","WillyS@gmail.com","09/04/1990","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("Ghetto Baby-QTness","Olivia","Gentles","liviaG@yahoo.com","10/09/1993","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("Rayon Grampx Irons","Rayon","Steel","ironRay@gmail.com","04/05/1994","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("kaykay","Kayla","Brown","missbrown@gmail.com","09/12/1993","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("Scully Anya","Anya","Bones","boniewonder@gmail.com","07/07/1992");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("Midget Hothead","Rochelle","Richards","rereRiches@yahoo.com","18/03/1989","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("Take_em2_Marz","Amari","Menss","Mari@hotmail.com","09/10/1991","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("Chrystal Cole","Crystal","Cole","C.C@hotmail.com","04/11/1992","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("Neko Martínez","Carolyn","Martinez","spanishkitty@hotmail.com","01/01/1996","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("SocaGod Steve","Steven","Morris","stevenMorris@gmail.com","27/02/1990","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("FreeFoodAdvocate","Micheal-Shane","Brown","MSB@gmail.com","18/08/1993","");
-	-- insert into profile (userName, fname, lname, email, dob, profile_pic) values("Mrs.Dweet Right","Charollette","Gentles","Charmander232@yahoo.com","23/12/1993","");
-
 
 CREATE TABLE creates
 (
 	postId int auto_increment NOT NULL,
 	userId int NOT NULL,
-	date_created DATETIME,
+	date_created datetime NOT NULL,
 	primary key(userId),
 	FOREIGN KEY(userId) REFERENCES users(userId) ON UPDATE CASCADE ON DELETE RESTRICT,
 	FOREIGN KEY(postId) REFERENCES post(postId) ON UPDATE CASCADE ON DELETE RESTRICT
@@ -325,25 +197,25 @@ CREATE TABLE comments_on
 	postId int NOT NULL,
 	userId int  NOT NULL,
 	commentId int NOT NULL,
-	date_commented DATETIME NOT NULL DEFAULT NOW(),
+	date_commented DATETIME NOT NULL ,
 	primary key(postId,userId,commentId),
 	FOREIGN KEY(userId) REFERENCES users(userId) ON UPDATE CASCADE ON DELETE RESTRICT,
 	FOREIGN KEY(postId) REFERENCES post(postId) ON UPDATE CASCADE ON DELETE RESTRICT,
 	FOREIGN KEY(commentId) REFERENCES comments(commentId) ON UPDATE CASCADE ON DELETE RESTRICT
 );
 
-
- 
 CREATE TABLE create_content
 (
 	userId int NOT NULL,
 	groupId int NOT NULL,
-	gpostId int auto_increment NOT NULL,
+	gpostId int  NOT NULL,
 	date_created DATETIME,
 	primary key(userId,groupId,gpostId),
 	FOREIGN KEY(userId) REFERENCES users(userId) ON UPDATE CASCADE ON DELETE RESTRICT,
 	FOREIGN KEY(groupId) REFERENCES groups(groupId) ON UPDATE CASCADE ON DELETE RESTRICT,
+	FOREIGN KEY(gpostId) REFERENCES group_post(gpostId) ON UPDATE CASCADE ON DELETE RESTRICT
 );
+ 
 
 
 
@@ -351,7 +223,7 @@ CREATE TABLE add_to_group
 (
 	userId int NOT NULL,
 	groupId int NOT NULL,
-	date_added DATETIME NOT NULL DEFAULT NOW(),
+	date_added DATETIME NOT NULL,
 	primary key(userId,groupId),
 	FOREIGN KEY(userId) REFERENCES users(userId) ON UPDATE CASCADE ON DELETE RESTRICT,
 	FOREIGN KEY(groupId) REFERENCES groups(groupId) ON UPDATE CASCADE ON DELETE RESTRICT
@@ -376,7 +248,7 @@ CREATE TABLE create_group
 (
 	groupId int NOT NULL,
 	userId int NOT NULL,
-	date_created DATETIME,
+	date_created DATETIME NOT NULL ,
 	primary key (groupId),
 	FOREIGN KEY (userId) REFERENCES users(userId) ON UPDATE CASCADE ON DELETE RESTRICT
 );
@@ -387,7 +259,7 @@ CREATE TABLE add_editors_group
 (
 	group_owner int NOT NULL,
 	users_added int NOT NULL ,
-	date_added DATETIME,
+	date_added DATETIME NOT NULL ,
 	primary key(group_owner,users_added),
 	FOREIGN KEY(group_owner) REFERENCES groups(group_owner) ON UPDATE CASCADE ON DELETE RESTRICT,
 	FOREIGN KEY(users_added) REFERENCES users(userId) ON UPDATE CASCADE ON DELETE RESTRICT
@@ -396,17 +268,17 @@ CREATE TABLE add_editors_group
 
 DELIMITER //
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `GetFriends`(IN `userID` INT)
+CREATE PROCEDURE GetFriends(IN userID INT)
 BEGIN
 
-SELECT users.fname,users.lname FROM `friend_of` JOIN users ON friend_of.friend_owner= users.userId WHERE friend_of.friend_owner=userID;
+SELECT users.fname,users.lname FROM friend_of JOIN users ON friend_of.friend_owner= users.userId WHERE friend_of.friend_owner=userID;
 
 END//
 DELIMITER ;
 
 DELIMITER //
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `GetGroups`(IN `userID` INT)
+CREATE  PROCEDURE GetGroups(IN userID INT)
 BEGIN
 
 SELECT group_name FROM groups WHERE group_owner = userID;
@@ -416,11 +288,10 @@ DELIMITER ;
 
 DELIMITER //
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `GetGroups`(IN `groupName` varchar(30))
+CREATE  PROCEDURE GetGroupPosts(IN groupName varchar(30))
 BEGIN
 
-SELECT SELECT title,text_body FROM group_post JOIN create_content JOIN groups ON group_post.groupId=create_content.groupId=groups.groupId WHERE groups.group_name=groupName;
+SELECT group_post.title,group_post.text_body FROM group_post JOIN create_content JOIN groups ON group_post.gpostId=create_content.gpostId AND groups.groupId=create_content.userId WHERE groups.group_name=groupName;
 
 END//
 DELIMITER ;
-

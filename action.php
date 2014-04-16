@@ -213,9 +213,20 @@ else if($_GET['a']=='enterGroup')
 						   WHERE $_POST[group_name]=add_to_group.group_name AND $_SESSION[userid]=add_to_group.userId"
 	$checkingrp_query = mysql_query($checking_qstring,$connect);
 	
-	if(!$checkingrp_querry)
+	if(!$checkingrp_query)
 	{
-	
+			die('Query Failure'.mysql_error($connect));
+	}
+	else
+	{
+		if($row =mysql_fetch_array($checkingrp_query,MYSQL_ASSOC))
+		{
+				
+		}
+	}
+	else
+	{
+		echo "<script>alert('You are not a member of this group!');</script>";
 	}
 	$viewgrpid_qstring =  "SELECT  groupId
 			         	   FROM groups 
@@ -273,40 +284,6 @@ else if($_GET['a']=='enterGroup')
 		echo"<script>alert('added to group')</script>";
 		echo "<script>location.replace('groups.php')</script>";
 	}
-}
-
-else if ($_GET['a']=='search')
-{
-	// echo "rgetert ";
-	// Filter
-	$keyword = trim ($_POST['keyword']);
-
-	// Select statement
-	$result = mysql_query("SELECT * FROM user WHERE fname LIKE '%" . $keyword ."%'");
-
-
-	// Display
-	if (!$result){
-	    echo "problem";
-	    exit();
-	}
-
-	while($result_arr = mysql_fetch_array( $result )) 
-	{ 
-		echo "fgdfg ";
-		echo $result_arr['fname']; 
-		echo " ";
-		echo "<br>"; 
-		echo "<br>"; 
-	}
-	$anymatches=mysql_num_rows($result); 
-	if ($anymatches == 0) 
-	{ 
-	   echo "Nothing was found that matched your query.<br><br>"; 
-	}
-	
-
-
 }
 else if(!isset($_GET['a']))
 {

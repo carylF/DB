@@ -11,7 +11,7 @@
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="C:\xampp\htdocs\DB\bootstrap-3.1.1-dist\css\bootstrap.css">
-    <script src"C:\xampp\htdocsDB\bootstrap-3.1.1-dist\js\bootstrap.js" type='text/javascript'></script>
+    <script src"/DB/bootstrap-3.1.1-dist/js/bootstrap.js" type='text/javascript'></script>
 
   </head>
  
@@ -36,7 +36,7 @@
           <input type="text" class="form-control" placeholder="Search" onkeyup="showHint(this.value)"s>
         </div>
         <button type="submit" class="btn btn-default-lg">
-         <span class="glyphicon glyphicon-search"></span>Serach</button>
+         <span class="glyphicon glyphicon-search"></span>Search</button>
       </form>
 
 
@@ -51,24 +51,21 @@
      </nav>
      <div id = 'ulist'>
 
-        <?php
-          $sql = "SELECT userId, fname, lname FROM users";
-          $result = mysql_query($sql);
-        ?>
+        
 		<h1 align="center">Administrator's Page</h1>
 		<h3>MyBook Users</h3>
 		<p> </p>
+		
 		<?php
-		mysql_connect("localhost", "root", "")or die("cannot connect server "); 
-		mysql_select_db("dbtest")or die("Cannot select desired database");
-		$sql="SELECT userId, fname, lname FROM users";
-		$result=mysql_query($sql);
-
-		if(! $result)
-		{
-			die('Could not get data: ' . mysql_error());
-		}
-		?>	
+		$connect = mysql_connect('localhost','admin','admin123');
+		$recipient_id; 
+		if(!mysql_select_db('mybook'))
+					{
+						die('Failure selecting Database'. mysql_error());
+					}
+          $sql = "SELECT userId, fname, lname FROM users";
+          $_SESSION['USERS'] = mysql_query($sql);
+        ?>	
 		
 		<table align="center" font="verandana,arial,san-serif" size="11px" color="#E0E0E0" width="1px" border="collapse">
           <tr>
@@ -78,14 +75,14 @@
           </tr>
 		  
 		 <?php
-		while($rows=mysql_fetch_array($result))
-		{
+			$result=$_SESSION['USERS'];
+			while($rows=mysql_fetch_array($result))
+			{
 		?>
 		  <tr>
-                  <td><?php echo "{$rows['userId']}"?></td>
                   <td><?php echo "{$rows['fname']}"?></td>
                   <td><?php echo "{$rows['lname']}"?></td>
-                  <td><a href="friends and post.php">Show Friends</a></td>
+                  <td><a href="friend.php">Show Friends</a></td>
               </tr>  
 		 <?php
 		 }

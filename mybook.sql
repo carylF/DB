@@ -271,12 +271,13 @@ DELIMITER //
 CREATE PROCEDURE GetFriends(IN userID INT)
 BEGIN
 
-SELECT users.fname,users.lname FROM friend_of JOIN users ON friend_of.friend_owner= users.userId WHERE friend_of.friend_owner=userID;
+SELECT users.fname,users.lname FROM friend_of JOIN users ON friend_of.friend = users.userId WHERE friend_of.friend_owner=userID;
 
 END//
 DELIMITER ;
 
 DELIMITER //
+
 
 CREATE  PROCEDURE GetGroups(IN userID INT)
 BEGIN

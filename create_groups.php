@@ -43,7 +43,7 @@ include('header2.html');
           </div>
 
 
-      <div class="col-md-8">
+      <div class="col-md-6">
 
         <div id="heading">
 					<h1>Create Group</h1>

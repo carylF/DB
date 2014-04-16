@@ -34,18 +34,19 @@ p{
 
 #group-form
 {
-	margin-left: 11em;
+	margin-left: 5em;
 	background-color: #C5C3C2;
 	padding: 24px 23px 20px 32px;
 	border-radius: 10px;
-	height: 430px;
+	height: 396px;
 	width: 440px;
 	color: black;
 }
 
 #creategrpbtn
 {
-	margin-top: 0px;
+
+	margin-top: -2em;
 }
 
 #name{

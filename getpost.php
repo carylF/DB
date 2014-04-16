@@ -1,7 +1,4 @@
 <?php
-//
-
-
 include('header2.html');
 ?>
   <head>
@@ -17,23 +14,28 @@ include('header2.html');
     <link rel="stylesheet" href="/DB/bootstrap-3.1.1-dist/css/bootstrap.css">
     <script src"/DB/bootstrap-3.1.1-dist/js/bootstrap.js" type='text/javascript'></script>
 
-
   </head>
- 
+<?php
+	mysql_connect("localhost", "root", "")or die("Cannot connect server"); 
+	mysql_select_db("dbtest")or die("Cannot select the desired database");
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<a href="show_users.php"><input type="button" value="Users"></a></br>
-
-<a href="gen_rep_users.php"><input type="button" value="Profiles"></a></br>
-
-<a href="gen_rep_uFriends.php"><input type="button" value="Friends"></a></br>
-
-<a href="show_groups.php"><input type="button" value="Groups"></a></br>
+	$Message = $_POST["text_body"];
 
 
-
-</html>
-
-
+	$sql= "INSERT INTO post(text_body)VALUES('$Message')";
+	if($result=mysql_query($sql))
+	{
+		echo "post added, click to go back to home page";
+		?>
+		<form id="goback" action="homepage.php" method="post">
+		<p> </p>
+		<input type="submit" name="Completed info" id="Completed_info" value="Go Back"/>
+		</form>
+		<?php
+	}
+	else
+	{
+		echo "Could not add your post";
+	}
+	mysql_close();
+?>

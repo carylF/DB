@@ -46,7 +46,7 @@ include('header2.html');
           </div>
 
 
-          <div class="col-md-8">
+          <div class="col-md-6">
 
             <div>
               <h2>Create a group</h2>

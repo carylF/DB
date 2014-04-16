@@ -8,6 +8,8 @@ include('header2.html');
     <title>MyBook || <?php echo $_SESSION['Name'] ;?></title>
     <meta http-equiv="Content-type" content="text/html;charset=ISO-8859-1" />
      <script src='//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js' type='text/javascript'></script>
+     <script src='behaviour.js' type='text/javascript'></script>
+
 
     <link rel="stylesheet" type="text/css" href="header2.css" />
     <link rel="stylesheet" type="text/css" href="homepage.css">
@@ -46,22 +48,22 @@ include('header2.html');
           </div>
 
 
-          <div class="col-md-8">
+          <div class="col-md-6">
             <ul class="nav nav-tabs">
             <li class="active"><a href="#">Text</a></li>
             <li><a href="#">Photo</a></li>
           </ul>
-            <textarea class="form-control col-xs-4" rows="6"></textarea>
+            <textarea class="form-control col-xs-2" rows="4"></textarea>
+            <!-- <div class="col-sm-6">
+            <input type="text" class="form-control" placeholder=".col-xs-3" rows='4'>
+          </div> -->
+
+            <button type="submit" class="btn btn-default-lg">Submit</button>
           </div>
+ 
 
-        </div>
-
-
-     </div>
-
-
-    <div id="footer">
-      Copyright © Cary Nicole Shantel Jodi
-    </div>
+  <div id="footer">
+     Copyright © Cary Nicole Shantel Jodi
+   </div>
   </body>
 </html>

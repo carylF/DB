@@ -12,6 +12,7 @@ include('header2.html');
      <!-- Imported local files -->
     <link rel="stylesheet" type="text/css" href="profile.css" />
     <link rel="stylesheet" type="text/css" href="header2.css">
+    <script src='behaviour.js' type='text/javascript'></script>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="/DB/bootstrap-3.1.1-dist/css/bootstrap.css">

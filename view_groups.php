@@ -32,7 +32,7 @@ include('header2.html');
 
             <div id="taskbar">
               <li>
-                <h4><span class="glyphicon glyphicon-list-alt col-md-2"></span>News Feed</h4>
+                <a href="homepage.php"><span class="glyphicon glyphicon-list-alt col-md-2"></span>News Feed</a>
               </li>
 
               <li>
@@ -48,7 +48,7 @@ include('header2.html');
           </div>
 
 
-          <div class="col-md-8">
+          <div class="col-md-6">
 
 			<div id="heading">
 				<h1>Your Groups</h1>

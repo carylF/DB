@@ -20,7 +20,6 @@ include('header2.html');
  
   <body id='body'>
 
-     </nav>
      <div id = "container">
 
         <div class="row">

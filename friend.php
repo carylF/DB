@@ -44,7 +44,7 @@ include('header2.html');
 					}
 				}
 			?> 
-			<a href="Profile.php">
+			<a href="profile.php">
 			<div id="footer">
 
       Copyright © Cary Nicole Shantel Jodi

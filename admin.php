@@ -26,9 +26,9 @@ include('header2.html');
 
 <a href="show_users.php"><input type="button" value="Users"></a></br>
 
-<a href="gen_rep_users.php"><input type="button" value="Profiles"></a></br>
+<a href="show_profiles.php"><input type="button" value="Profiles"></a></br>
 
-<a href="gen_rep_uFriends.php"><input type="button" value="Friends"></a></br>
+<a href="show_friends.php"><input type="button" value="Friends"></a></br>
 
 <a href="show_groups.php"><input type="button" value="Groups"></a></br>
 

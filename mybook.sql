@@ -13,66 +13,36 @@ CREATE TABLE users
 );
 
 /*data insertions*/	
-	insert into users (fname, lname, email, pword) values("Shelly-Ann","Gordon", "shelly_biz@yahoo.com", "password1");
-	insert into users (fname, lname, email, pword) values("Nicole","Johnson", "nikkyj@gmail.com", "password2");
-	insert into users (fname, lname, email, pword) values("Rosini","Robinson", "sheldonshell@hotmail.com", "password3");
-	insert into users (fname, lname, email, pword) values("Shantel","Thompson", "shantellee@yahoo.com", "1password4");
-	insert into users (fname, lname, email, pword) values("Jason","Johnson", "jayjay@gmail.com", "password5");
-	insert into users (fname, lname, email, pword) values("Damion","Ford", "forditute@yahoo.com", "password6");
-	insert into users (fname, lname, email, pword) values("Mary-Jane","Jones","berryberry@hotmail.com","password7");
-	insert into users (fname, lname, email, pword) values("Marcus","Smith","marcus.S@hotmail.com","password8");
-	insert into users (fname, lname, email, pword) values("Andrew","Sham","Adrewshams@hotmail.com","password9");
-	insert into users (fname, lname, email, pword) values("Breton","Davis","davis.b@hotmail.com","password10");
-	insert into users (fname, lname, email, pword) values("Oraine","Wallace","rainywallace@hotmail.com","password11");
-	insert into users (fname, lname, email, pword) values("Jermaine","Flemmings","jrf@hotmail.com","password12");
-	insert into users (fname, lname, email, pword) values("Salome'","Fransis","S.fransis@hotmail.com","password13");
-	insert into users (fname, lname, email, pword) values("Amanda","Fransis","amandafrannie@gmail.com","password14");
-	insert into users (fname, lname, email, pword) values("Darian","Kingsly","KinglyD@yahoo.com","password15");
-	insert into users (fname, lname, email, pword) values("Tiara","Johnson","tj.johnson@hotmail.com","password16");
-	insert into users (fname, lname, email, pword) values("Terrie-Lee","Fairweather","fair_Lee@yahoo.com","password17");
-	insert into users (fname, lname, email, pword) values("Samantha","Smith","SammySmith@gmail.com","password18");
-	insert into users (fname, lname, email, pword) values("Adrian","Castle","kingcastle@hotmail.com","password19");
-	insert into users (fname, lname, email, pword) values("Akeel","Brown","Akeel.B.jr@hotmail.com","password20");
-	insert into users (fname, lname, email, pword) values("Mark","Anthony","markiemark@gmail.com","password21");
-	insert into users (fname, lname, email, pword) values("Chad","Ford","CFord@yahoo.com","password22");
-	insert into users (fname, lname, email, pword) values("Anique","Mckie","purpleflower@gmail.com","password23");
-	insert into users (fname, lname, email, pword) values("Brittany","Knight","BBknight@hotmail.com","password24");
-	insert into users (fname, lname, email, pword) values("Chad","Bartley","superchad@hotmail.com","password25");
-	insert into users (fname, lname, email, pword) values("Richard","Carttie","richkid@gmail.com","password26");
-	insert into users (fname, lname, email, pword) values("Valence","Small","notsosmall@yahoo.com","password27");
-	insert into users (fname, lname, email, pword) values("Jamie","Lee","j-lee@yahoo.com","password28");
-	insert into users (fname, lname, email, pword) values("Ricardo","Fuller","rickfuller@gmail.com","password29");
-	insert into users (fname, lname, email, pword) values("Richard","Rose","richroses@gmail.com","password30");
-	insert into users (fname, lname, email, pword) values("Micheal","Adams","mrAdams@hotmail.com","password31");
-	insert into users (fname, lname, email, pword) values("Tara","Sham","babysham@gmail.com","password32");
-	insert into users (fname, lname, email, pword) values("Nick","Freeman","free-nick@yahoo.com","password33");
-	insert into users (fname, lname, email, pword) values("Hopeton","Sinclair","Hope@yahoo.com","password34");
-	insert into users (fname, lname, email, pword) values("Danielle","Philips","phillieD@hotmail.com","password35");
-	insert into users (fname, lname, email, pword) values("Anna","Rowe","flowerchild@hotmail.com","password36");
-	insert into users (fname, lname, email, pword) values("Alazo","Brown","lanzoB@gmail.com","password37");
-	insert into users (fname, lname, email, pword) values("Adam","Rhys","rhysofAdam@hotmail.com","password38");
-	insert into users (fname, lname, email, pword) values("Joseph","Jordon","jojo@gmail.com","password39");
-	insert into users (fname, lname, email, pword) values("David","Summerville","sunnyVilla@yahoo.com","password40");
-	insert into users (fname, lname, email, pword) values("Samantha","Forbs","sammyforbs@hotmail.com","password41");
-	insert into users (fname, lname, email, pword) values("Timothy","Forbs","timmyforbs@hotmail.com","password42");
-	insert into users (fname, lname, email, pword) values("Zohoori","Campbell","campZohoori@gmail.com","password43");
-	insert into users (fname, lname, email, pword) values("Samanth","Rae","raeofsunshine@yahoo.com","password44");
-	insert into users (fname, lname, email, pword) values("Jordan","Goodman",".Godman@yahoo.com","password45");
-	insert into users (fname, lname, email, pword) values("Ashley","Manderson","itsAshley@gmail.com","password46");
-	insert into users (fname, lname, email, pword) values("Rashana","King","queenshofkings@hotmail.com","password47");
-	insert into users (fname, lname, email, pword) values("Victor","Stone","MrStone@hotmail.com","password48");
-	insert into users (fname, lname, email, pword) values("Stephen","Wilson","WillyS@gmail.com","password49");
-	insert into users (fname, lname, email, pword) values("Olivia","Gentles","liviaG@yahoo.com","password50");
-	insert into users (fname, lname, email, pword) values("Rayon","Steel","ironRay@gmail.com","1password51");
-	insert into users (fname, lname, email, pword) values("Kayla","Brown","missbrown@gmail.com","password52");
-	insert into users (fname, lname, email, pword) values("Anya","Bones","boniewonder@gmail.com","password53");
-	insert into users (fname, lname, email, pword) values("Rochelle","Richards","rereRiches@yahoo.com","password54");
-	insert into users (fname, lname, email, pword) values("Amari","Menss","Mari@hotmail.com","password55");
-	insert into users (fname, lname, email, pword) values("Crystal","Cole","C.C@hotmail.com","password56");
-	insert into users (fname, lname, email, pword) values("Carolyn","Martinez","spanishkitty@hotmail.com","password57");
-	insert into users (fname, lname, email, pword) values("Steven","Morris","stevenMorris@gmail.com","password58");
-	insert into users (fname, lname, email, pword) values("Micheal-Shane","Brown","MSB@gmail.com","password59");
-	insert into users (fname, lname, email, pword) values("Charollette","Gentles","Charmander232@yahoo.com","password60");
+	insert into users (fname, lname,email, pword, dob) values("Admin", "Admin", "admin@host.com", "admin123","1993/09/23");
+	insert into users (fname, lname, email, pword,dob) values("Shelly-Ann","Gordon", "shelly_biz@yahoo.com", "password1", "1993/09/12");
+	insert into users (fname, lname, email, pword,dob) values("Nicole","Johnson", "nikkyj@gmail.com", "password2", "1993/07/22");
+	insert into users (fname, lname, email, pword,dob) values("Rosini","Robinson", "sheldonshell@hotmail.com", "password3", "1993/09/12");
+	insert into users (fname, lname, email, pword,dob) values("Shantel","Thompson", "shantellee@yahoo.com", "1password4", "1993/04/09");
+	insert into users (fname, lname, email, pword,dob) values("Jason","Johnson", "jayjay@gmail.com", "password5", "1993/01/13");
+	insert into users (fname, lname, email, pword,dob) values("Damion","Ford", "forditute@yahoo.com", "password6", "1993/03/12");
+	insert into users (fname, lname, email, pword,dob) values("Mary-Jane","Jones","berryberry@hotmail.com","password7", "1993/09/12");
+	insert into users (fname, lname, email, pword,dob) values("Marcus","Smith","marcus.S@hotmail.com","password8","1993/02/15");
+	insert into users (fname, lname, email, pword,dob) values("Andrew","Sham","Adrewshams@hotmail.com","password9", "1993/03/12");
+	insert into users (fname, lname, email, pword,dob) values("Breton","Davis","davis.b@hotmail.com","password10", "1993/04/12");
+	insert into users (fname, lname, email, pword,dob) values("Oraine","Wallace","rainywallace@hotmail.com","password11", "1993/05/12");
+	insert into users (fname, lname, email, pword,dob) values("Jermaine","Flemmings","jrf@hotmail.com","password12", "1993/06/12");
+	insert into users (fname, lname, email, pword,dob) values("Salome'","Fransis","S.fransis@hotmail.com","password13", "1993/07/12");
+	insert into users (fname, lname, email, pword,dob) values("Amanda","Fransis","amandafrannie@gmail.com","password14", "1993/08/12");
+	insert into users (fname, lname, email, pword,dob) values("Darian","Kingsly","KinglyD@yahoo.com","password15", "1993/09/12");
+	insert into users (fname, lname, email, pword,dob) values("Tiara","Johnson","tj.johnson@hotmail.com","password16", "1993/10/12");
+	insert into users (fname, lname, email, pword,dob) values("Terrie-Lee","Fairweather","fair_Lee@yahoo.com","password17", "1993/11/12");
+	insert into users (fname, lname, email, pword,dob) values("Samantha","Smith","SammySmith@gmail.com","password18", "1993/12/12");
+	insert into users (fname, lname, email, pword,dob) values("Adrian","Castle","kingcastle@hotmail.com","password19", "1994/01/12");
+	insert into users (fname, lname, email, pword,dob) values("Akeel","Brown","Akeel.B.jr@hotmail.com","password20", "1994/02/12");
+	insert into users (fname, lname, email, pword,dob) values("Mark","Anthony","markiemark@gmail.com","password21", "1994/03/12");
+	insert into users (fname, lname, email, pword,dob) values("Chad","Ford","CFord@yahoo.com","password22", "1994/04/12");
+	insert into users (fname, lname, email, pword,dob) values("Anique","Mckie","purpleflower@gmail.com","password23", "1994/05/12");
+	insert into users (fname, lname, email, pword,dob) values("Brittany","Knight","BBknight@hotmail.com","password24", "1994/06/12");
+	insert into users (fname, lname, email, pword,dob) values("Chad","Bartley","superchad@hotmail.com","password25", "1994/07/12");
+	insert into users (fname, lname, email, pword,dob) values("Richard","Carttie","richkid@gmail.com","password26", "1994/08/12");
+	insert into users (fname, lname, email, pword,dob) values("Valence","Small","notsosmall@yahoo.com","password27", "1994/09/12");
+
+	
 
 
 CREATE TABLE post
@@ -104,17 +74,7 @@ CREATE TABLE post
 	insert into post (title,post_type,text_body) values("Robot Specks","Photo","Much progress is being made on the T90");
 	insert into post (title,post_type,text_body) values("UWI's Glory","Photo","The Univerity of the West Indies unveils its research in Canser prevention");
 	insert into post (title,post_type,text_body) values("This show tho","Photo","Look at what just happened on G.O.T :O ");
-	insert into post (title,post_type,text_body) values("Re-Learning different poses.","Photo","I must admit, getting back to drawing has been really exciting.Having a blasttt!");
-	insert into post (title,post_type,text_body) values("Literature Challenge","Text","Six word story. Go!");
-	insert into post (title,post_type,text_body) values("Procrastinating","Text","Go get that work done !!!");
-	insert into post (post_type) values("Photo");
-	insert into post (post_type) values("Text");
-	insert into post (post_type) values("Text");
-	insert into post (post_type) values("Photo");
-	insert into post (post_type) values("Text");
-	insert into post (post_type) values("Text");
-	insert into post (post_type) values("Text");
-	insert into post (post_type) values("Photo");
+
 
 
 CREATE TABLE groups
@@ -189,6 +149,9 @@ CREATE TABLE creates
 	FOREIGN KEY(userId) REFERENCES users(userId) ON UPDATE CASCADE ON DELETE RESTRICT,
 	FOREIGN KEY(postId) REFERENCES post(postId) ON UPDATE CASCADE ON DELETE RESTRICT
 );
+
+insert into creates (postId,userId, date_created) values ("4","2","2014-04-16 00:00:00");
+insert into creates (postId,userId, date_created) values ("6","7","2014-04-16 00:00:00");
 
 
 
@@ -267,32 +230,32 @@ CREATE TABLE add_editors_group
 
 
 DELIMITER //
-
 CREATE PROCEDURE GetFriends(IN userID INT)
 BEGIN
-
 SELECT users.fname,users.lname FROM friend_of JOIN users ON friend_of.friend = users.userId WHERE friend_of.friend_owner=userID;
-
 END//
 DELIMITER ;
 
+
 DELIMITER //
+CREATE PROCEDURE GetUserPost(IN userID INT)
+BEGIN
+SELECT post.title, post.text_body FROM post JOIN creates ON post.postId = creates.postId WHERE creates.userId=userID;
+END //
+DELIMITER;
 
 
+DELIMITER //
 CREATE  PROCEDURE GetGroups(IN userID INT)
 BEGIN
-
 SELECT group_name FROM groups WHERE group_owner = userID;
-
 END//
 DELIMITER ;
 
-DELIMITER //
 
+DELIMITER //
 CREATE  PROCEDURE GetGroupPosts(IN groupName varchar(30))
 BEGIN
-
 SELECT group_post.title,group_post.text_body FROM group_post JOIN create_content JOIN groups ON group_post.gpostId=create_content.gpostId AND groups.groupId=create_content.userId WHERE groups.group_name=groupName;
-
 END//
 DELIMITER ;
